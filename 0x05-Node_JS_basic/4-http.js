@@ -14,4 +14,3 @@ app.listen(PORT, HOST_NAME, () => {
 });
 
 module.exports = app;
-curl localhost:1245/any_endpoint && echo 
