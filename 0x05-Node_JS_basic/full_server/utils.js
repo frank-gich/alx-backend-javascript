@@ -16,11 +16,16 @@ async function readDatabase(path) {
       age: row[2],
       field: row[3].replace('\r', ''),
     }));
+
   const csStudents = students.filter((student) => student.field === 'CS')
+
     .map((student) => student.firstName);
+
   const sweStudents = students.filter((student) => student.field === 'SWE')
+
     .map((student) => student.firstName);
+    
   return { csStudents, sweStudents };
 }
 
-export default readDatabase;
+module.exports = readDatabase;

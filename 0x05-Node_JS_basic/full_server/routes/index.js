@@ -10,4 +10,4 @@ app.get('/students', StudentsController.getAllStudents);
 
 app.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
-export default app;
+module.exports = app;
