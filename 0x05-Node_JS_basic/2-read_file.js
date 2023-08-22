@@ -25,8 +25,8 @@ const SWE = students.filter((student) => student.field === 'SWE')
     .map((student) => student.firstName);
 
 console.log(`Number of students: ${students.length}`);
-console.log(`Number of students: ${CS.length}. List: ${CS.join(',')}`);
-console.log(`Number of students: ${SWE.length}. List: ${SWE.join(',')}`);
+console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(',')}`);
+console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(',')}`);
 }
 
 module.exports = countStudents;
