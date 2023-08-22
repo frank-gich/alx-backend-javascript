@@ -7,10 +7,9 @@ class StudentsController {
       const str1 = 'This is the list of our students\n';
       const str2 = `Number of students in CS: ${data.csStudents.length}. List: ${data.csStudents.join(', ')}\n`;
       const str3 = `Number of students in SWE: ${data.sweStudents.length}. List: ${data.sweStudents.join(', ')}`;
-      res.status(200).send(str1 + str2 + str3);
-    } catch (error) {
+      res.send(str1 + str2 + str3);
+    } catch (e) {
       res.status(500).send('Cannot load the database');
-      return;
     }
   }
 
@@ -24,7 +23,7 @@ class StudentsController {
       const data = await readDatabase(process.argv[2]);
       const list = major === 'CS' ? data.csStudents.join(', ') : data.sweStudents.join(', ');
       return res.status(200).send(`List: ${list}`);
-    } catch (error) {
+    } catch (e) {
       return res.status(500).send('Cannot load the database');
     }
   }
