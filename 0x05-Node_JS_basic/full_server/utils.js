@@ -24,8 +24,8 @@ async function readDatabase(path) {
   const sweStudents = students.filter((student) => student.field === 'SWE')
 
     .map((student) => student.firstName);
-    
+
   return { csStudents, sweStudents };
 }
 
-module.exports = readDatabase;
+export default readDatabase;
