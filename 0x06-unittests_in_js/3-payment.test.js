@@ -6,6 +6,7 @@ const sendPaymentRequestToApi = require('./3-payment.js');
 
 describe('sendPaymentRequestToApi', () => {
   const utilsSpy = sinon.spy(Utils, 'calculateNumber');
+
   it('should call calculateNumber() once with exact arguments', () => {
     sendPaymentRequestToApi(100, 20);
     expect(utilsSpy.calledOnce).to.be.true;

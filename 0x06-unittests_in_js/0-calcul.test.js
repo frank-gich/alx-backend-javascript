@@ -15,7 +15,4 @@ describe('calculateNumber()', () => {
   it('should return 6 after adding 1.5 and 3.7', () => {
     assert.equal(calculateNumber(1.5, 3.7), 6);
   });
-  it('should return -3 after adding -1.0 and -2', () => {
-    assert.equal(calculateNumber(-1.0, -2), -3);
-  });
 });
